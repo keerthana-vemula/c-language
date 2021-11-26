@@ -1,0 +1,27 @@
+AIM:WRITE A PROGRAM TO GENERATE ALL THE PRIME NUMBERS BETWEEN 1 AND N USING WHILE LOOP
+
+PROGRAM:
+#include<stdio.h>
+int main(){
+	int n,i=2,j,x;
+	printf("Enter the n value: ");
+	scanf("%d",&n);
+	if(n>1) printf("The prime numbers from 1 to %d are ",n);
+	while(i<n){
+		j=2; x=0;
+		while(j<i){
+			if(i%j==0){
+				x=1;
+				break;
+			}
+			j++;
+		}
+		if(x==0) printf("%d, ",i);
+		i++;
+	}
+	printf("\n");
+	return 0;
+}
+OUTPUT:
+Enter the n value: 6
+The prime numbers from 1 to 6 are 2, 3, 5

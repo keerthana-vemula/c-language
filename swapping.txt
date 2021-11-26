@@ -1,0 +1,21 @@
+AIM:WRITE A POINTER PROGRAM TO SWAP TWO NUMBERS WITHOUT USING THE 3RD VARIABLE
+PROGRAM:
+#include<stdio.h>
+#include<math.h>
+void swap(int *x,int *y){
+	*x=*x+*y;
+	*y=*x-*y;
+	*x=*x-*y;
+}
+int main(){
+	int a,b;
+	printf("enter a,b values seperated by comma");
+	scanf("%d%d",&a,&b);
+	printf("before swapping a and b values are %d,%d",a,b);
+	swap(&a,&b);
+	printf("after swapping a and b values are %d,%d",a,b);
+	return 0;
+}
+OUTPUT:
+enter a,b values seperated by comma4,1
+before swapping a and b values are 4,1after swapping a and b values are 1,4

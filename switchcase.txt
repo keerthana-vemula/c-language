@@ -1,0 +1,54 @@
+AIM:Write a program to find the grace marks for a studentusing switch. The user
+should enter the class obtained bythe student and the number of subjects he
+has failed in.
+Use the following rules:
+i. If the student gets first class and the number of subjectsfailed is &gt;3, then
+no grace marks are awarded. If thenumber of subjects failed is less than or
+equal to &#39;3&#39; thenthe grace is 5 marks per subject.
+ii. If the student gets second class and the number of subjectsfailed in is &gt;2,
+then no grace marks are awarded. If thenumber of subjects failed in less
+than or equal to &#39;3&#39; thenthe grace is 4 marks per subject.
+iii. If the student gets third class and the number of subjectsfailed in is &gt;1,
+then no grace marks are awarded. If thenumber of subjects failed in is equal
+to &#39;1&#39; then the graceis 5 marks per subject
+
+PROGRAM:
+
+#include<stdio.h>
+int main()
+{
+int grade,failed;
+	printf("enter the class obtained by the student");
+	scanf("%d",&grade);
+	printf("how many subjects has the student failed");
+	scanf("%d",&failed);
+	switch(grade)
+	{
+		case 1:
+			if (failed>3)
+				printf("no grace marks awarded");
+			if (failed<=3)
+				printf("your grace marks is 5");
+			break;
+		case 2:
+			if (failed>2)
+				printf("no grace marks awarded");
+			if (failed<=3)
+				printf("your grace marks is 4");
+			break;
+		case 3:
+			if (failed>1)
+				printf("no grace marks awarded");
+			if (failed==1)
+				printf("your grace marks is 5");
+			break;
+			default:("your entered wrong class for the student");
+	}
+	if(grade==1||grade==2||grade==3)
+	{
+		printf("the studet has obtained a grade marks of %d per subject",grade);
+	}	
+}
+OUTPUT:
+enter the class obtained by the student 6
+how many subjects has the student failed 2

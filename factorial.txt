@@ -1,0 +1,33 @@
+AIM:WRITE A PROGRAM TO FIND FACTORIAL OF A GIVEN NUMBER USING RECURSION
+PROGRAM:
+#include <stdio.h>
+
+typedef long long int lli;
+
+
+
+lli fact(lli f ){
+
+	if(f==1) return 1;
+
+	else return f*fact(f-1);
+
+}
+
+
+
+int main(){
+
+	int f;
+
+	printf("\nEnter the number you want to find factorial for: ");
+
+	scanf("%d",&f);
+
+	printf("\nfactorial of %d is %lld\n\n",f,fact(f));
+
+}
+OUTPUT:
+Enter the number you want to find factorial for: 5
+
+factorial of 5 is 120

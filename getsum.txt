@@ -1,0 +1,23 @@
+AIM:Write a program to find the sum of individual digits of a positive integer
+using for loop
+
+PROGRAM:
+#include<stdio.h>
+int getsum(int n)
+{
+	int sum=0;
+	while(n!=0)
+	{
+		sum=sum+n%10;
+		n=n/10;
+	}
+	return sum;
+}
+int main()
+{
+	int n=637;
+	printf("%d",getsum(n));
+	return 0;
+}
+OUTPUT:
+	16

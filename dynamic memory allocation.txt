@@ -1,0 +1,23 @@
+*/AIM:WRITE A PROGRAM TO CALCULATE THE SUM OF N NUMBERS ENTERED BY THE USER DYNAMIC MEMORY ALLOCATION FUNCTIONS/*
+PROGRAM:
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+	int sum=0,n;
+	printf("enter n value");
+	scanf("%d",&n);
+	int*p=(int*)malloc(n*sizeof(int));
+	for(int i=0;i<n;i++){
+		printf("enter number -%d:",i+1);
+		scanf("%d",(p+i));
+	}
+	for(int i=0;i<n;i++)sum+=p[i];
+	printf("sum of the %d numbers is %d",n,sum);
+	return 0;
+}
+OUTPUT:
+enter n value 3
+enter number -1:2
+enter number -2:1
+enter number -3:4
+sum of the 3 numbers is 7
